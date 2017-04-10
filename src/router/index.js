@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from 'components/Hello'
+import MainPage from 'components/MainPage'
+import Blog from 'components/Blog'
 
 Vue.use(Router)
 
@@ -8,8 +9,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'MainPage',
+      component: MainPage
+    },
+    {
+      path: '/:id',
+      name: 'Blog',
+      component: Blog
     }
+      
   ]
 })
